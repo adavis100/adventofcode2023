@@ -18,7 +18,6 @@ public class Day09 {
         return Files.readString(Path.of("src/main/resources/day09.txt"));
     }
 
-
     public int part1(String s) {
         int total = 0;
         for (String line : s.split("\\n")) {
