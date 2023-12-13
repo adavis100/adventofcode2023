@@ -1,5 +1,6 @@
 package adavis100.day10;
 
+import adavis100.util.Coord;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -22,7 +23,7 @@ class Day10Test {
     @Test
     void getsStart() {
         Day10 day10 = new Day10(lines);
-        assertThat(day10.getStartPos()).isEqualTo(new Day10.Coord(1, 1));
+        assertThat(day10.getStartPos()).isEqualTo(new Coord(1, 1));
     }
 
     @Test
@@ -34,7 +35,7 @@ class Day10Test {
     @Test
     void getsStartNeighbors() {
         Day10 day10 = new Day10(lines);
-        assertThat(day10.getNeighbors(new Day10.Coord(1,1))).containsExactlyInAnyOrder(new Day10.Coord(2, 1), new Day10.Coord(1, 2));
+        assertThat(day10.getNeighbors(new Coord(1,1))).containsExactlyInAnyOrder(new Coord(2, 1), new Coord(1, 2));
     }
 
     @Test

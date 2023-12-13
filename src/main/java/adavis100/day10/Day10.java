@@ -1,5 +1,7 @@
 package adavis100.day10;
 
+import adavis100.util.Coord;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,28 +12,7 @@ public class Day10 {
     Set<Coord> pathCoords = new HashSet<>();
     Coord startPos;
 
-    static class Coord {
-        int row;
-        int col;
 
-        public Coord(int row, int col) {
-            this.row = row;
-            this.col = col;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Coord coord = (Coord) o;
-            return row == coord.row && col == coord.col;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(row, col);
-        }
-    }
 
     public Day10(String in) {
         var lines = in.split("\\n");
